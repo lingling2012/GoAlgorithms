@@ -22,10 +22,11 @@ func main(){
 
 	selectionSorter := sort.NewSelectionSort(a);
 	selectionSorter.Sort();
-	if !selectionSorter.IsSorted() {
-		panic("Sort Failed!\n");
+	if selectionSorter.IsSorted() {
+		selectionSorter.Show();
+	}else{
+		println("Sort Failed!");
 	}
-	selectionSorter.Show();
 }
 
 
