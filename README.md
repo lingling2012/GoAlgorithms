@@ -1,0 +1,4 @@
+AlgorithmsInGo
+==============
+
+Algorithms in Go
