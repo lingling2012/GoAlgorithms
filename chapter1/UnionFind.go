@@ -12,11 +12,7 @@ type UnionFind struct {
 func NewUnionFind(N int) *UnionFind {
 	this := &UnionFind{}
 	this.VUnionFind = this
-	this.count = N
-	this.id = make([]int, N)
-	for i := 0; i < N; i++ {
-		this.id[i] = i
-	}
+	this.Super(N)
 	return this
 }
 
@@ -37,9 +33,11 @@ func (this *UnionFind) Connected(p, q int) bool {
 }
 
 func (this *UnionFind) Find(p int) int {
+	panic("UnionFind.Find can't be called\n")
 	return 0
 }
 
 func (this *UnionFind) Union(p, q int) {
+	panic("UnionFind.Union can't be called\n")
 	return
 }

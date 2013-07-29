@@ -1,8 +1,8 @@
 package chapter1
 
 import (
-	"testing"
 	"fmt"
+	"testing"
 )
 
 func TestQuickFind(t *testing.T) {
@@ -20,17 +20,17 @@ func TestQuickFind(t *testing.T) {
 		{1, 0},
 		{6, 7},
 	}
-	var uf IUnionFind;
-	uf = NewQuickFind(N);
-	for i:=0; i<len(cin); i++ {
-		p:= cin[i][0];
-		q:= cin[i][1];
-		if uf.Connected(p,q) {
-			continue;
+	var uf IUnionFind
+	uf = NewQuickFind(N)
+	for i := 0; i < len(cin); i++ {
+		p := cin[i][0]
+		q := cin[i][1]
+		if uf.Connected(p, q) {
+			continue
 		}
-		uf.Union(p,q);
-		
-		fmt.Printf("%d %d\n", p, q);
+		uf.Union(p, q)
+
+		fmt.Printf("%d %d\n", p, q)
 	}
-	fmt.Printf("%d components\n", uf.Count());
+	fmt.Printf("%d components\n", uf.Count())
 }
