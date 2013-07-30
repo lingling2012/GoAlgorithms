@@ -1,11 +1,11 @@
 package chapter1
 
 import (
-	"fmt"
 	"testing"
+	"fmt"
 )
 
-func TestQuickFind(t *testing.T) {
+func TestQuickUnion(t *testing.T) {
 	const N = 10
 	var cin = [][2]int{
 		{4, 3},
@@ -21,13 +21,14 @@ func TestQuickFind(t *testing.T) {
 		{6, 7},
 	}
 	var uf IUnionFind
-	uf = NewQuickFind(N)
+	uf = NewQuickUnion(N)
 	for i := 0; i < len(cin); i++ {
 		p := cin[i][0]
 		q := cin[i][1]
 		
 		uf.Summary();
 		fmt.Printf("\n");
+		
 		if uf.Connected(p, q) {
 			continue
 		}

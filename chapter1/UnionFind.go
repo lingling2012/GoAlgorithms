@@ -1,6 +1,8 @@
 package chapter1
 
-import ()
+import (
+	"fmt"
+)
 
 type UnionFind struct {
 	VUnionFind
@@ -40,4 +42,10 @@ func (this *UnionFind) Find(p int) int {
 func (this *UnionFind) Union(p, q int) {
 	panic("UnionFind.Union can't be called\n")
 	return
+}
+
+func (this *UnionFind) Summary(){
+	for i := 0; i < len(this.id); i++ {
+		fmt.Printf("%d ", this.id[i]);
+	}
 }

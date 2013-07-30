@@ -11,4 +11,5 @@ type IUnionFind interface {
 	VUnionFind
 	Connected(p, q int) bool
 	Count() int
+	Summary()
 }
