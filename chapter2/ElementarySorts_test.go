@@ -1,16 +1,16 @@
-package main
+package chapter2
 
 import (
-	"AlgorithmsInGo/sort"
+	"testing"
 	"bytes"
 	"os"
 	"strings"
 )
 
 //Read strings from standard input, sort them, and print
-func main() {
+func TestSort(t *testing.T) {
 	var strBuffer bytes.Buffer
-	var a []sort.IComparable
+	var a []IComparable
 
 	if len(os.Args) < 2{
 		println("Too few arguments. Usage: [Selection|Insertion]Sort")
@@ -20,18 +20,18 @@ func main() {
 	strBuffer.ReadFrom(os.Stdin)
 	b := strings.Fields(strBuffer.String())
 
-	a = make([]sort.IComparable, len(b))
+	a = make([]IComparable, len(b))
 	for i := 0; i < len(b); i++ {
-		a[i] = sort.ComparableString(b[i])
+		a[i] = ComparableString(b[i])
 	}
 
-	var sorter sort.ISort
+	var sorter ISort
 	switch os.Args[1] {
 	case "SelectionSort":
-		sorter = sort.NewSelectionSort(a)
+		sorter = NewSelectionSort(a)
 		break
 	case "InsertionSort":
-		sorter = sort.NewInsertionSort(a)
+		sorter = NewInsertionSort(a)
 		break
 	}
 
