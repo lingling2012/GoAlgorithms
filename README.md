@@ -31,7 +31,7 @@ GoCLRS
 
 <strong>第三部分 数据结构</strong>
 
-第十章 基本数据结构
+[第十章 基本数据结构](chapters/chapter10.md)
 
 第十一章 散列表
 
