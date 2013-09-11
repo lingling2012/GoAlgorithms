@@ -1,4 +1,4 @@
-package ch21
+package algorithms
 
 import (
 

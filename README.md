@@ -21,7 +21,7 @@ GoCLRS
 
 <strong>第二部分 排序和顺序统计量</strong>
 
-[第六章 堆排序](chapters/ch06.md)
+[第六章 堆排序](chapters/chapter06.md)
 
 第七章 快速排序
 
@@ -53,11 +53,11 @@ GoCLRS
 
 <em>第十八章 B树（略）</em>
 
-[第十九章 斐波那契堆](chapters/ch19.md)
+[第十九章 斐波那契堆](chapters/chapter19.md)
 
 <em>第二十章 van Emde Boas树（略）</em>
 
-[第二十一章 用于不相交集合的数据结构](chapters/ch21.md)
+[第二十一章 用于不相交集合的数据结构](chapters/chapter21.md)
 
 <strong>第六部分 图算法</strong>
 
