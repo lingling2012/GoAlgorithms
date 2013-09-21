@@ -32,8 +32,10 @@ func (this *LinkedList) Insert(x *LinkedElement){
 }
 
 func (this *LinkedList) Delete(x *LinkedElement){
-	x.prev.next = x.next;
-	x.next.prev = x.prev;	
+	if x!=this.sentinel && x!=nil{
+		x.prev.next = x.next;
+		x.next.prev = x.prev;
+	}	
 }
 
 func (this *LinkedList) Search(k int) *LinkedElement{
@@ -41,8 +43,11 @@ func (this *LinkedList) Search(k int) *LinkedElement{
 	for x!=this.sentinel && x.key != k{
 		x = x.next;
 	}
-	
-	return x;
+	if x==this.sentinel{
+		return nil;
+	}else{
+		return x;
+	}
 }
 
 func (this *LinkedList) Summary(){

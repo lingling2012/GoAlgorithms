@@ -15,8 +15,14 @@ func TestLinkedList(t *testing.T) {
 		l.Insert(x);
 		l.Summary();
 	}
-	x := l.Search(1);
-	l.Delete(x);
 	
-	l.Summary();
+	for i:=0; i<len(A); i++{
+		x := l.Search(A[i]);
+		l.Delete(x);
+		l.Summary();
+	}
+	
+	x := l.Search(1);
+		l.Delete(x);
+		l.Summary();
 }
